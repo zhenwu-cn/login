@@ -1,0 +1,13 @@
+assign:
+  strategy:
+    random
+    # round-robin
+  schedule:
+    '*/30 * * * *'
+  assignees:
+    - ZwwWayne
+    - jshilong
+    - hhaAndroid
+    - AronLin
+    - RangiLyu
+    - BIGWangYuDong
