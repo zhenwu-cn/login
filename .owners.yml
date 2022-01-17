@@ -3,7 +3,7 @@ assign:
     random
     # round-robin
   schedule:
-    '*/30 * * * *'
+    '*/1 * * * *'
   assignees:
     - ZwwWayne
     - jshilong
