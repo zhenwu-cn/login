@@ -1,0 +1,35 @@
+dele_rules:
+  issue:
+    create:
+      - name: "english needs"
+        conditions:
+          - "issue.title ~= ANSI"
+        actions:
+          - comment:
+            message: "@{{ issue.author.name }}, english-please."
+      - name: "add assignee"
+        conditions:
+          - "issue.assignees.count == 0"
+        actions:
+          - assign_with_owners
+          
+      - name: "set stale"
+        conditions:
+          - "issue.history.status"
+          
+  pull_request:
+    create:
+      - name: "add size label"
+        conditions:
+          - "pr.labels ~= size/*"
+        actions:
+          - label_with_size
+
+      - name: "welcome new contributor"
+        conditions:
+          - "pr.author.login ~= first_pr"
+        actions:
+          - comment:
+            message: "Welcome @{{ .pr.author.login }}! Thanks for your first PR to {{ .pr.org }}/{{ .pr.repo }} 🎉"
+          
+            
