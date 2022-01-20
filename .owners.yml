@@ -5,9 +5,10 @@ assign:
   schedule:
     '*/1 * * * *'
   assignees:
-    - ZwwWayne
-    - jshilong
-    - hhaAndroid
-    - AronLin
-    - RangiLyu
-    - BIGWangYuDong
+    - break2017
+#     - ZwwWayne
+#     - jshilong
+#     - hhaAndroid
+#     - AronLin
+#     - RangiLyu
+#     - BIGWangYuDong
