@@ -1,7 +1,8 @@
 assign:
   strategy:
-    random
+    # random
     # round-robin
+    daily-shift-based
   schedule:
     '*/1 * * * *'
   assignees:
